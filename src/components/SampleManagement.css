@@ -1,0 +1,61 @@
+
+form {
+    display: flex; /* Mostrar como flex */
+    flex-direction: column; /* Dirección de flexión */
+    align-items: center; /* Alinear al centro */
+}
+
+/* Estilo del grupo de formulario */
+.form-group {
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilo del control del formulario */
+.form-control {
+    display: block; /* Mostrar como bloque */
+    width: 100%; /* Ancho completo */
+    height: 34px; /* Altura */
+    padding: 6px 12px; /* Espaciado interno */
+    font-size: 14px; /* Tamaño de fuente */
+    line-height: 1.42857143; /* Altura de línea */
+    color: #555; /* Color del texto */
+    background-color: #ffffff; /* Color de fondo */
+    background-image: none; /* Sin i magen de fondo */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 4px; /* Bordes redondeados */
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075); /* Sombra */
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075); /* Sombra */
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s; /* Transición */
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; /* Transición */
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; /* Transición */
+}
+
+/* Estilo del control del formulario cuando está enfocado */
+.form-control:focus {
+    border-color: #66afe9; /* Color del borde */
+    outline: 0; /* Sin contorno */
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6); /* Sombra */
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6); /* Sombra */
+}
+
+/* Estilo del botón primario dentro del formulario */
+.form-control .btn-primary {
+    color: #fff; /* Color del texto */
+    background-color: #337ab7; /* Color de fondo */
+    border-color: #2e6da4; /* Color del borde */
+}
+
+/* Estilo del botón primario dentro del formulario cuando está enfocado */
+.form-control .btn-primary:focus {
+    color: #fff; /* Color del texto */
+    background-color: #286090; /* Color de fondo */
+    border-color: #122b40; /* Color del borde */
+}
+
+/* Estilo del botón primario dentro del formulario cuando está activo */          
+.form-control .btn-primary:active {
+    color: #fff; /* Color del texto */
+    background-color: #286090; /* Color de fondo */
+    border-color: #122b40; /* Color del borde */
+}
+
