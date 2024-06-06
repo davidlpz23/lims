@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import Login from './components/Login';
@@ -8,36 +9,24 @@ import SampleManagement from './components/SampleManagement';
 import './components/inventario/StandardsModule.css';
 import StandardsModule from './components/inventario/StandardsModule';
 import ReagentsModule from './components/inventario/ReagentsModule';
-import EquipmentModule from './components/inventario/EquipmentModule'; // Importa el componente EquipmentModule
+import EquipmentModule from './components/inventario/EquipmentModule';
 import UserManagement from './components/UserManagement';
-
+import AnalysisProgramming from './components/programacion/AnalysisProgramming';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Login />
-      <SampleManagement />
-      <StandardsModule />
-      <ReagentsModule />
-      <EquipmentModule /> {/* Utiliza el componente EquipmentModule */}
-      <UserManagement />
       
-
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/sample-management" element={<SampleManagement />} />
+          <Route path="/path_to_StandardsModule" element={<StandardsModule />} />
+          <Route path="/path_to_ReagentsModule" element={<ReagentsModule />} />
+          <Route path="/path_to_EquipmentModule" element={<EquipmentModule />} />
+          <Route path="/user-management" element={<UserManagement />} />
+          <Route path="/analysis-programming" element={<AnalysisProgramming />} />
+        </Routes>
       <Footer />
     </div>
   );
