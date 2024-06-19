@@ -16,9 +16,9 @@ import AnalysisProgramming from './components/programacion/AnalysisProgramming';
 function App() {
   return (
     <div className="App">
-      <Header />
-      
-        <Routes>
+      <Header /> // Agregar el componente Header para mostrar la barra de navegación
+                  
+        <Routes> // Agregar el componente Routes para definir las rutas de la aplicación
           <Route path="/" element={<Login />} />
           <Route path="/sample-management" element={<SampleManagement />} />
           <Route path="/path_to_StandardsModule" element={<StandardsModule />} />
@@ -27,7 +27,7 @@ function App() {
           <Route path="/user-management" element={<UserManagement />} />
           <Route path="/analysis-programming" element={<AnalysisProgramming />} />
         </Routes>
-      <Footer />
+      <Footer /> // Agregar el componente Footer para mostrar el pie de página
     </div>
   );
 }

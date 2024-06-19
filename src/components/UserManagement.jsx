@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
-
+// Definir el componente UserManagement para gestionar los usuarios en el sistema LIMS
 const UserManagement = () => {
     const [selectedRole, setSelectedRole] = useState('');
     const [selectedAccountManagement, setSelectedAccountManagement] = useState('');
-
+// Definir la función handleRoleChange para manejar los cambios en el campo de selección de roles
     const handleRoleChange = (e) => {
         setSelectedRole(e.target.value);
     };
-
+// Definir la función handleSubmit para enviar los datos al servidor        
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission logic here
+     // adicionar la lógica para enviar los datos al servidor   
     };
-
+// Definir la función handleAccountManagementChange     
     const handleAccountManagementChange = (e) => {  // Crear la función handleAccountManagementChange    
         setSelectedAccountManagement(e.target.value);  // Actualizar el estado selectedAccountManagement con el valor seleccionado del formulario       
     };
 
-    
+    // Definir el formulario para la gestión de usuarios en el sistema LIMS 
     return (
         <div>
             <h1>Módulo de Usuarios</h1>
@@ -37,11 +37,11 @@ const UserManagement = () => {
                         <option value="Analista Programador de Actividades">Analista Programador de Actividades</option>
                     </Form.Control>
                 </Form.Group>
-
+// Crear un botón para guardar los cambios en el formulario
                 <Button variant="primary" type="submit">
                     Guardar
                 </Button>
-            
+            // Crear un formulario para la administración de cuentas    
                 <Form.Group controlId="accountManagementSelect">
                     <Form.Label>Administración de Cuentas:</Form.Label>
                     <Form.Control as="select" value={selectedAccountManagement} onChange={handleAccountManagementChange}>
@@ -52,7 +52,7 @@ const UserManagement = () => {
                     </Form.Control> 
                 </Form.Group>
             </Form>
-               
+               // Crear un botón para guardar los cambios en el formulario
                 <Button variant="primary" type="submit">
                     Guardar
                 </Button>

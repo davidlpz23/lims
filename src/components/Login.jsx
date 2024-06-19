@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import './Login.css';
 
+// 
 const Login = () => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    const [username, setUsername] = useState(''); // Definir el estado de username
+    const [password, setPassword] = useState(''); // Definir el estado de password
 
+    // Definir las funciones handleUsernameChange, handlePasswordChange y handleSubmit
     const handleUsernameChange = (e) => {
         setUsername(e.target.value);
     };

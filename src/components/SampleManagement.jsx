@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './SampleManagement.css';
-
+//  Definir el componente SampleManagement para gestionar las muestras  en el sistema LIMS              
 const SampleManagement = () => {
     const [sampleData, setSampleData] = useState({
         productName: '',
@@ -12,7 +12,7 @@ const SampleManagement = () => {
         storageConditions: '',
         observations: '',
     });
-
+//  Definir las funciones handleChange y handleSubmit para manejar los cambios en los campos del formulario y el envío de datos
     const handleChange = (e) => {
         const { name, value } = e.target;
         setSampleData((prevData) => ({
@@ -20,13 +20,13 @@ const SampleManagement = () => {
             [name]: value,
         }));
     };
-
+//  Definir la función handleSubmit para enviar los datos al servidor               
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Perform validation and submit the data to the server
+        // adicionar la lógica para enviar los datos al servidor    
         console.log(sampleData);
     };
-
+//  Definir el formulario para la gestión de muestras en el sistema LIMS            
     return (
         <form onSubmit={handleSubmit}>
             <div className="form-group">
